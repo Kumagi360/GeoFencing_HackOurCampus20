@@ -1,5 +1,5 @@
 # GeoFencing_HackOurCampus20
-
+Hackathon project by Kunal, Weijia, Mateo and Taylor
 
 Foundational code adapted from Geotify Project by Ray Wenderlich (Geotify)
 
