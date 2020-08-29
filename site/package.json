@@ -1,5 +1,5 @@
 {
-  "name": "watcher",
+  "name": "martha",
   "version": "0.0.1",
   "description": "Real-time population density monitor",
   "main": "main.js",
@@ -8,7 +8,7 @@
     "start": "parcel index.html",
     "build": "parcel build --public-url . index.html"
   },
-  "author": "KWMT",
+  "author": "CUnever",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0",
