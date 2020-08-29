@@ -1,6 +1,6 @@
 # GeoFencing_HackOurCampus20
 
-** NOTE: Code above is early version, not yet merged with final version **
+** NOTE: Swift code above is early version, not yet merged with final version **
 
 Hackathon project by Kunal, Weijia, Mateo and Taylor
 
