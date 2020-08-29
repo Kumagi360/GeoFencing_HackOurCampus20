@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>MARTHA | HOC 2020</title>
+		<link rel="stylesheet" href="styles_shared.css">
+		<link rel="icon" type="image/png" href="assets/favicon.png">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
+		<link href="assets/cluster.png" rel="preload" as="image" id="parcel-workaround">
+	</head>
+	<body id="app_content">
+		<div class="flex-container">
+			<div id="toggle_sidebar" class="toggle-sidebar-extended" state="extended">
+				<img id="toggle_sidebar_indicator" class="toggle-sidebar-indicator-extended" src="assets/arrows.svg" alt="Toggle Menu Visibility"></img>
+			</div>
+			<div class="content-container content-sidebar-extended" id="content_sidebar">
+				<div class="content-headers" style="display:flex; flex-direction: row;">
+					<div style="display: flex; flex-direction: column; align-items: flex-start">
+						<h2 class="content-header">MARTHA</h2>
+						<h4 class="content-subheader">Monitoring And Restriction-Tracking Hotspot Application</h4>
+					</div>
+					<div style="display: flex; flex-direction: column; align-items: center">
+						<img src="assets/cu-seal.png" class="header-image"/>
+					</div>
+				</div>
+				<div class="content-padded">
+					<div class="option-container">
+						<div class="option-wrapper">
+							<input type="checkbox" id="toggle_points" class="option-checkbox"> 
+							<label class="option-label" for="toggle_points">Enable Points</label>
+						</div>
+						<div class="option-wrapper">
+							<input type="checkbox" id="toggle_heatmap" class="option-checkbox" checked>
+							<label class="option-label" for="toggle_heatmap">Enable Heatmap</label>
+						</div>
+						<div class="option-wrapper">
+							<input type="checkbox" id="toggle_clusters" class="option-checkbox" checked>
+							<label class="option-label" for="toggle_clusters">Show Hotspots</label>
+						</div>					
+					</div>
+					<div class="data-container">
+						<h3 class="data-descriptor">Total tracked individuals</h3>
+						<span class="data-value" id="num_watched">0</span>
+					</div>
+					<div class="data-container">
+						<h3 class="data-descriptor">Total risk clusters</h3>
+						<span class="data-value" id="num_clusters">0</span>
+					</div>
+					<div id="dev_only">
+						<a href="populate.html" class="embed-link"  style="color:blue;">(DEV) Open Population Service</a>
+						<a href="cluster.html" class="embed-link"  style="color:blue;">(DEV) Open Cluster Service</a>
+						<p class="devonly">(DEV) Select Data Source</p>
+						<select id = "source_selector">
+						   <option value = "">Production</option>
+						   <option value = "Demo">Populator Demo Data</option>
+						 </select>
+					</div>
+					<div class="content-footer">
+						<div class="content-legal">
+							<b>© 2020 Kunal, Weijia, Mateo, Taylor.</b><br>
+						</div>
+						<div class="content-links">
+							<a href="mailto://someaddresshere@example.com">Contact</a><a href="./privacy.html">Privacy</a><a href="./legal.html">Legal/Credits</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="watcher_map">
+				<div id="api_error_wrapper">
+					<div class="error-indicator" id="api_error_indicator">
+						<img src="assets/error-indicator-icon.png" class="error-indicator-icon"/>
+						<span class="error-indicator-label">Failed to refresh data <i id="api_error_indicator_label">()</i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./main.js"></script>
+	</body>
+</html>
